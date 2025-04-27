@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Email</th>
+  </tr>
+  <tr>
+    <td>Jacob</td>
+    <td>18</td>
+    <td>jacob@gmail.com</td>
+  </tr>
+  <tr>
+    <td>Klaus</td>
+    <td>19</td>
+    <td>kl@abv.bg</td>
+  </tr>
+  <tr>
+    <td>Jack</td>
+    <td>21</td>
+  </tr>
+</table>
