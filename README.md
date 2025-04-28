@@ -55,7 +55,9 @@ Example:
 
 ![C++ AddRow](Project/images/Add_exmpl.png)
 
-## Remove
+---
+
+## ➖ Remove
 **Syntax:** `remove <rowNumber>`
 
 This command removes a row you choose in your table.
@@ -64,7 +66,9 @@ Example (removing the row we just added):
 
 ![C++ RemoveRow](Project/images/Remove_exmpl.png)
 
-## Edit
+---
+
+## ✏️ Edit
 **Syntax:** `edit <rowNumber> <colNumber> <newValue>`
 
 This command lets you change the value in a cell, chosen by the user.
@@ -73,24 +77,22 @@ Example (editing Klaus' age):
 
 ![C++ EditRow](Project/images/Edit_exmpl.png)
 
-## Save
-When typing in "save", the program will ask you in which `.txt` you want to save the table to. After choosing the file, it will save your table in html code format in your txt file so you can load it again if you want to.
+---
 
-Example:
+## 💾 Save
+Typing `save` prompts you to specify the name of the `.txt` file you want to save the table into.  
+The table is then saved in HTML format, allowing you to load and edit it again in the future.
 
-//insert save example image
+Now let's save the table we modified now:
+
+![C++ EditRow](Project/images/Save_exmpl.png)
 
 The content of the `.txt` file is:
 
-//insert content of html3.txt file
+![C++ EditRow](Project/images/HTML_Save_exmpl.png)
 
-## Exit
-"Exit" stops the program. If you didnt type "save" before exiting, the changes would be lost, so make sure to save the changes before exiting the program.
+---
 
-
-
-
-
-
-
-
+## ❌ Exit
+Typing `exit` safely closes the program.  
+**Note:** If you have unsaved changes and exit without using `save`, your changes will be lost.
