@@ -17,6 +17,7 @@ Here’s a list of everything currently working in the project:
 - ✅ **Editing** rows by selecting the number of the row and column
 - ✅ **Visualising** the table into the C++ console terminal
 - ✅ **Saving** an HTML table into `.txt` file
+- ✅ **Exiting** the program without saving any changes you made (unless you typed in "save" before exiting)
 
 
 ---
@@ -41,11 +42,26 @@ In C++, it would look like this:
 The syntax of this command is: add <rowNumber> <value1>,<value2>,<value3>...
 This command lets you add a new row into your table.
 
-
+//insert add example image
 
 ## Remove
-The syntax
+The syntax of this command is: remove <rowNumber>
+This command removes a row you choose in your table.
 
+//insert remove example image
+
+
+## Edit
+The syntax of this command is: edit <rowNumber> <colNumber> <newValue>
+This command lets you change the value in a cell, chosen by the user.
+
+//insert edit example image
+
+## Save
+When typing in "save", the program will ask you in which `.txt` you want to save the table to. After choosing the file, it will save your table in html code format in your txt file so you can load it again if you want to.
+
+## Exit
+"Exit" stops the program. If you didnt type "save" before exiting, the changes would be lost, so make sure to save the changes before exiting the program.
 
 
 
