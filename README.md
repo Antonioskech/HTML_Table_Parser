@@ -30,7 +30,7 @@ Look at the html2.txt file in the project folder. You can see an example html ta
 ## Print
 When you type in "print" in the console, you will see the visualisation of you table. 
 The original table looks like this:
-![Table example](images/HTML_Table.png)
+![Table example](Project/images/HTML_Table.png)
 
 ## Add
 The syntax of this command is: add <rowNumber> <value1>,<value2>,<value3>...
