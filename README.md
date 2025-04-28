@@ -30,11 +30,18 @@ Look at the html2.txt file in the project folder. You can see an example html ta
 ## Print
 When you type in "print" in the console, you will see the visualisation of you table. 
 The original table looks like this:
+
 ![Table example](Project/images/HTML_Table.png)
+
+In C++, it would look like this:
+
+![C++ Table](Project/images/C++_Table.png)
 
 ## Add
 The syntax of this command is: add <rowNumber> <value1>,<value2>,<value3>...
-This command lets you add a new row
+This command lets you add a new row into your table.
+
+
 
 ## Remove
 The syntax
