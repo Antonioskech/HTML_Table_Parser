@@ -12,20 +12,29 @@ namespace Commands {
 
 int main() {
     HTMLTable table;
-    //Write the name of the txt file you want to use
-    table.parseFromFile("html2.txt");
+
+    std::cout << "Enter the name of the .txt file you want to parse (example: html2.txt): ";
+    std::string filename;
+    std::getline(std::cin, filename);
+
+    table.parseFromFile(filename);
 
     if (!table.empty()) {
-        std::cout << "Table parsed successfully.\n";
-        std::cout << "Write down one of the following commands you want: add, remove, edit, print, save, exit\n";
+        std::cout << "Table parsed successfully from '" << filename << "'.\n";
     }
+    else {
+        std::cout << "Warning: Table could not be parsed or file is empty.\n";
+    }
+
+    std::cout << "Write down one of the following commands you want: add, remove, edit, print, save, exit\n";
 
     std::string command;
     while (true) {
+        std::cout << "\n> "; // Little prompt for better UX
         std::cin >> command;
 
         if (command == Commands::ADD_ROW) {
-            std::cout << "Type in row number (starting from 0) and the values separated by commas (Do not leave space after each comma).\n";
+            std::cout << "Type in row number (starting from 0) and the values separated by commas (No spaces after commas).\n";
             size_t row;
             std::cin >> row;
             std::cin.ignore();
@@ -46,27 +55,31 @@ int main() {
             std::cin.ignore();
             std::string value;
             std::getline(std::cin, value);
-            std::cout << "Is it a header? (Type in 'y' or 'n')\n";
-            bool isHeader;
+
+            std::cout << "Is it a header? (Type 'y' for yes, 'n' for no): ";
             char answer;
             std::cin >> answer;
-            if (answer == 'y') {
-                isHeader = true;
-            }
-            else {
-                isHeader = false;
-            }
+            bool isHeader = (answer == 'y');
+
             table.editCell(row, col, value, isHeader);
         }
         else if (command == Commands::PRINT_TABLE) {
             table.print();
         }
         else if (command == Commands::SAVE_TABLE) {
-            table.saveToFile("html2.txt");
-            std::cout << "Table saved successfully.\n";
+            std::cout << "Enter the filename you want to save the table to (e.g., output.txt):\n";
+            std::string filename;
+            std::cin >> filename;
+            table.saveToFile(filename);
+            std::cout << "Table saved successfully to " << filename << ".\n";
         }
+
         else if (command == Commands::EXIT) {
+            std::cout << "Exiting program. Goodbye!\n";
             break;
+        }
+        else {
+            std::cout << "Unknown command. Please try again.\n";
         }
     }
 }
